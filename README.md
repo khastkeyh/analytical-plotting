@@ -1,21 +1,17 @@
-#analytical data plotting
-#Read the txt and plot the data in file
+#This code is used in reading txt file and plotting the required data
 # -*- coding: utf-8 -*-
 """
 Created on Wed Oct 12 20:41:14 2022
-
-@author: YZDemirbas
+@author: YusufZiyaDemirbas
 """
 import numpy as np
 import matplotlib.pyplot as plt
 
 def extract_data(inname1):
-    
     infile1 = open(inname1,"r")
     drop = []
     temp = []
     time = []
-    
     infile1.readline()
     
     for line in infile1:
@@ -34,9 +30,7 @@ def extract_data(inname1):
         dr = line[:a]
         dr = float(dr)
         drop.append(dr)
-    
     infile1.close()
-    
     return(drop,temp,time)
 
 def plotData(inputfile):
